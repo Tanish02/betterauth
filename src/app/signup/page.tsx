@@ -5,3 +5,5 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
+
+// end code

@@ -5,3 +5,5 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+
+// end code
