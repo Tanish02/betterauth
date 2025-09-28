@@ -1,6 +1,6 @@
-"use Client";
+"use client";
 import { authClient } from "@/lib/auth-client";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const signUp = () => {
@@ -9,7 +9,7 @@ const signUp = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     console.log("Form submitted:", { name, email, password });
 
@@ -48,25 +48,25 @@ const signUp = () => {
       >
         <h1> SignUp </h1>
         <input
-          className="border-white-600 p-2 rounded"
+          className="bg-zinc-700 border text-white-600 p-2 rounded"
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
-          className="border-white-600 p-2 rounded"
+          className="bg-zinc-700 border text-white-600 p-2 rounded"
           type="text"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          className="border-white-600 p-2 rounded"
+          className="bg-zinc-700 border text-white-600 p-2 rounded"
           type="password"
           placeholder="Password"
           value={password}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button
           type="submit"
