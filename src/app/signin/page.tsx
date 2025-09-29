@@ -1,10 +1,9 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
-// import SignInPage from "./page";
 
-const SignInPage = () => {
+const SignIn = () => {
   const router = useRouter();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -61,6 +60,6 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default SignIn;
 
 // end code
