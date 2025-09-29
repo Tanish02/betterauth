@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { Sign } from "crypto";
+import Logout from "./components/logout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           <Link href={"/dashboard"}>Dashboard</Link>
           <Link href={"/signin"}>SignIn</Link>
           <Link href={"/signup"}>SignUp</Link>
+          <Logout />
         </nav>
         {children}
       </body>
