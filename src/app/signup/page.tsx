@@ -1,6 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import React from "react";
 
 const signUp = () => {
@@ -27,7 +27,7 @@ const signUp = () => {
           console.log("Request Started:", ctx);
         },
         onSuccess: (ctx) => {
-          redirect: "/dashboard";
+          redirect("/dashboard");
           console.log("Request Success:", ctx);
         },
         onError: (ctx) => {
