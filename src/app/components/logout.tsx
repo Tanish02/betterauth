@@ -8,7 +8,7 @@ const Logout = () => {
     await authClient.signOut({
       fetchOptions: {
         onSuccess: () => {
-          redirect("/signin"); // redirect to login page
+          redirect("/auth/signin"); // redirect to login page
         },
       },
     });

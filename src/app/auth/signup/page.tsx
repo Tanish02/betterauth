@@ -37,8 +37,16 @@ const signUp = () => {
       }
     );
 
-    console.log("SignUp Response:", { data: data, error: error });
+    console.log("SignUp Response:", { data: data });
   }
+
+  // SignUp with Google Logic
+  const handleGoogleSignUp = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+    console.log("Google SignUp:", { data: data });
+  };
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-900">
@@ -72,7 +80,13 @@ const signUp = () => {
           type="submit"
           className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
         >
-          Sign Up
+          Signup
+        </button>
+        <button
+          onClick={handleGoogleSignUp}
+          className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+        >
+          Signup with Google
         </button>
       </form>
     </div>

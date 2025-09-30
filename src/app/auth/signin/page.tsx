@@ -1,12 +1,26 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
-import React from "react";
+import { redirect, useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 
 const SignIn = () => {
   const router = useRouter();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+
+  // redirect if user is logged in and cannot access signin page
+  // const {
+  //   data: session,
+  //   isPending, //loading state
+  //   error, //error object
+  //   refetch, //refetch the session
+  // } = authClient.useSession();
+
+  // useEffect(() => {
+  //   if (session) {
+  //     redirect("/dashboard");
+  //   }
+  // }, [session]);
 
   async function handleSubmit(e: any) {
     e.preventDefault();
