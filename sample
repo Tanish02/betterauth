@@ -1,0 +1,6 @@
+BETTER_AUTH_SECRET="R2nrzORSsnLdmBCrFZHdd4kWU2VxkN4V"
+BETTER_AUTH_URL="http://localhost:3000"
+MONGODB_URL="mongodb://root:pass@localhost:27018/betterauth?authSource=admin&w=1"
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+GOOGLE_CLIENT_ID="602580030433-86q5vr94fmknebdjicoph7ssupgf3bgg.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="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"
